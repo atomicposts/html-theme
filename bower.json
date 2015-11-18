@@ -1,0 +1,8 @@
+{
+    "name": "atomic-posts-html",
+    "version": "0.0.1",
+    "dependencies": {
+        "bootstrap": "~v4.0.0-alpha"
+    },
+    "private": true
+}
