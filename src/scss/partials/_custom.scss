@@ -1,0 +1,255 @@
+body {
+  min-height: 2000px;
+  padding-top: 240px;
+}
+
+
+/* Text colours */
+@include text-emphasis-variant('.text-orange', $brand-orange);
+@include text-emphasis-variant('.text-aquamarine', $brand-aquamarine);
+@include text-emphasis-variant('.text-yellow', $brand-yellow);
+
+
+/* Navbar custom styles */
+
+.navbar {
+  font-family: $font-family-title;
+}
+
+.navbar-header > h1 {
+  margin: 0;
+}
+.navbar-brand {
+  float: left;
+  padding: 0;
+  font-size: 45px;
+  line-height: 40px;
+  height: $navbar-height;
+  padding: $grid-gutter-width/2;
+  span {@include transition(color .15s linear);}
+  @include transition(font-size .5s ease, height .15s linear);
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    > span > span {
+      color: $brand-aquamarine;
+      &.text-yellow {
+        color: $brand-dark-brown;
+      }
+    }
+  }
+  > span {
+    padding: 20px;
+    display: block;
+    float: left;
+    > span {
+      float: left;
+      clear: both;
+    }
+  }
+  > img {
+    display: block;
+    float: left;
+    max-height: 100px;
+    @include transition(max-height .5s ease);
+
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    .navbar > .container &,
+    .navbar > .container-fluid & {
+      margin-left: -$navbar-padding-horizontal;
+    }
+  }
+}
+
+// Navbar nav links
+//
+// Builds on top of the `.nav` components with its own modifier class to make
+// the nav the full height of the horizontal nav (above 768px).
+
+.navbar-default {
+  border-top: 15px solid $brand-dark-brown;
+}
+.navbar-default .navbar-nav {
+  margin: ($navbar-padding-vertical / 2) (-$navbar-padding-horizontal);
+
+  > li > a {
+    font-size: 20px;
+    line-height: $line-height-computed;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+
+    &:hover {
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    }
+
+  }
+
+  // Uncollapse the nav
+  @media (min-width: $grid-float-breakpoint) {
+    float: left;
+    margin: 0;
+    > li {
+      float: left;
+      > a {
+        padding-top:    80px;
+        padding-bottom: 10px;
+        padding-left:  20px;
+        padding-right:  25px;
+        min-width: 130px;
+        background-position: 20px -160px;
+        background-repeat: no-repeat;
+        @include transition(background-position .5s ease, padding .5s ease);
+        &:hover {
+          background-position: 10px 0;
+        }
+      }
+
+      &:nth-child(1) a {
+        background-color: lighten($brand-aquamarine, 8%);
+        background-image: url('../img/alfa.svg');
+        &:hover {
+          background-color: lighten($brand-aquamarine, 5%);
+        }
+      }
+      &:nth-child(2) a {
+        background-color: lighten($brand-yellow, 8%);
+        background-image: url('../img/beta.svg');
+        &:hover {
+          background-color: lighten($brand-yellow, 5%);
+        }
+      }
+      &:nth-child(3) a {
+        background-color: lighten($brand-orange, 8%);
+        background-image: url('../img/gamma.svg');
+        &:hover {
+          background-color: lighten($brand-orange, 5%);
+        }
+      }
+    }
+  }
+}
+
+.navbar-default.navbar-shrink {
+  @media (min-width: $grid-float-breakpoint) {
+    min-height: $navbar-height/2;
+    .navbar-nav {
+      > li {
+        > a {
+          padding-top: 30px;
+        }
+      }
+    }
+    .navbar-brand {
+
+      font-size: 25px;
+      line-height: 20px;
+      height: $navbar-height/2;
+      padding: $grid-gutter-width/4;
+      > span {
+        padding: 10px;
+      }
+      > img {
+        max-height: 50px;
+      }
+    }
+  }
+}
+
+// Navbar toggle
+//
+// Custom button for toggling the `.navbar-collapse`, powered by the collapse
+// JavaScript plugin.
+
+.navbar-toggle {
+  background-color: darken($brand-aquamarine, 5%);
+  &:hover,
+  &:focus {
+    border-color: darken($brand-yellow, 10%);
+  }
+  // Bars
+  .icon-bar {
+    height: 3px;
+    border-radius: 2px;
+  }
+}
+
+// Navbar nav links
+//
+// Builds on top of the `.nav` components with its own modifier class to make
+// the nav the full height of the horizontal nav (above 768px).
+
+.navbar-default .navbar-nav {
+  @media (max-width: $grid-float-breakpoint-max) {
+    margin: 0px -15px;
+    > li > a {
+      background-color: $brand-aquamarine;
+      padding-top:    15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid darken($brand-aquamarine, 20%);
+      &:hover {
+        background-color: $brand-yellow;
+      }
+    }
+
+    .active > a {
+      background-color: $brand-orange;
+      &:hover {
+        background-color: $brand-yellow;
+      }
+    }
+
+    // Dropdowns get custom display when collapsed
+    .open .dropdown-menu {
+      position: static;
+      float: none;
+      width: auto;
+      margin-top: 0;
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+      > li > a,
+      .dropdown-header {
+        padding: 5px 15px 5px 25px;
+      }
+      > li > a {
+        line-height: $line-height-computed;
+        &:hover,
+        &:focus {
+          background-image: none;
+        }
+      }
+    }
+  }
+}
+
+/* Styles for sidebar */
+.sidebar {
+  h3 {
+    font-family: $font-family-title;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    text-align: right;
+    padding: 20px 20px 25px 10px;
+    position: relative;
+    background-repeat: no-repeat;
+    &.top-tags {
+      background-image: url('../img/background-side-yellow.svg');
+    }
+    &.top-posts {
+      background-image: url('../img/background-side-aquamarine.svg');
+    }
+  }
+
+  ul.top-tags {
+    li {
+      float: left;
+      margin: 2px;
+    }
+  }
+  ul li {
+    list-style: none;
+  }
+}
+
+/* Styles for custom tags */

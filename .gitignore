@@ -1,4 +1,4 @@
-src/*
+src/components/*
 .idea/*
 node_modules/*
 .sass-cache/*
