@@ -2,7 +2,8 @@
     "name": "atomic-posts-html",
     "version": "0.0.1",
     "dependencies": {
-        "bootstrap-sass": "~3.3.5"
+        "bootstrap-sass": "~3.3.5",
+        "animatedheader": "latest"
     },
     "private": true
 }

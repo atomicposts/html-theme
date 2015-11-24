@@ -1,6 +1,6 @@
 body {
   min-height: 2000px;
-  padding-top: 240px;
+  padding-top: 210px;
 }
 
 
@@ -8,7 +8,6 @@ body {
 @include text-emphasis-variant('.text-orange', $brand-orange);
 @include text-emphasis-variant('.text-aquamarine', $brand-aquamarine);
 @include text-emphasis-variant('.text-yellow', $brand-yellow);
-
 
 /* Navbar custom styles */
 
@@ -54,13 +53,6 @@ body {
     @include transition(max-height .5s ease);
 
   }
-
-  @media (min-width: $grid-float-breakpoint) {
-    .navbar > .container &,
-    .navbar > .container-fluid & {
-      margin-left: -$navbar-padding-horizontal;
-    }
-  }
 }
 
 // Navbar nav links
@@ -78,11 +70,9 @@ body {
     font-size: 20px;
     line-height: $line-height-computed;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-
     &:hover {
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
     }
-
   }
 
   // Uncollapse the nav
@@ -106,24 +96,24 @@ body {
       }
 
       &:nth-child(1) a {
-        background-color: lighten($brand-aquamarine, 8%);
+        background-color: lighten($brand-aquamarine, 5%);
         background-image: url('../img/alfa.svg');
         &:hover {
-          background-color: lighten($brand-aquamarine, 5%);
+          background-color: $brand-aquamarine;
         }
       }
       &:nth-child(2) a {
-        background-color: lighten($brand-yellow, 8%);
+        background-color: lighten($brand-yellow, 5%);
         background-image: url('../img/beta.svg');
         &:hover {
-          background-color: lighten($brand-yellow, 5%);
+          background-color: $brand-yellow;
         }
       }
       &:nth-child(3) a {
-        background-color: lighten($brand-orange, 8%);
+        background-color: lighten($brand-orange, 5%);
         background-image: url('../img/gamma.svg');
         &:hover {
-          background-color: lighten($brand-orange, 5%);
+          background-color: $brand-orange;
         }
       }
     }
@@ -230,7 +220,7 @@ body {
     color: white;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     text-align: right;
-    padding: 20px 20px 25px 10px;
+    padding: 20px 35px 25px 10px;
     position: relative;
     background-repeat: no-repeat;
     &.top-tags {
@@ -241,10 +231,18 @@ body {
     }
   }
 
+
   ul.top-tags {
+    padding: 0;
+    margin: 10px 0;
     li {
-      float: left;
-      margin: 2px;
+      float: right;
+      margin: 4px;
+      a.label {
+        display: inline-block;
+        padding: .5em .7em .6em;
+        font-size: 100%;
+      }
     }
   }
   ul li {
@@ -253,3 +251,114 @@ body {
 }
 
 /* Styles for custom tags */
+.label-orange {
+  @include label-variant(lighten($brand-orange, 10%));
+}
+.label-aquamarine {
+  @include label-variant(lighten($brand-aquamarine, 10%));
+}
+.label-yellow {
+  @include label-variant(lighten($brand-yellow, 10%));
+}
+
+/* Post Styles */
+.post {
+  header {
+    padding-bottom: 15px;
+    img.author {
+      display: block;
+      float: left;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
+    }
+    .date {
+      color: $gray-light;
+    }
+    .author-name {
+      font-size: 16px;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+  }
+  .title {
+    font-weight: bold;
+  }
+  .subtitle {
+    margin: 10px 0 20px 0;
+  }
+  p {
+    font-size: 21px;
+    font-weight: 300;
+  }
+
+  > footer {
+    padding: 10px 0;
+  }
+}
+
+
+/* Footer styles */
+body > footer {
+  margin-top: 250px;
+  background-color: $brand-dark-brown;
+  padding: 60px 0 40px 0;
+
+  .container {
+    position: relative;
+    &:before {
+      right: 0;
+      top: -220px;
+      position: absolute;
+      content: " ";
+      display: block;
+      height: 190px;
+      width: 245px;
+      background-image: url('../img/reactores.svg');
+      background-repeat: no-repeat;
+    }
+    .brand {
+      font-family: $font-family-title;
+      font-size: 30px;
+      color: $gray-light;
+      img {
+        display: block;
+        float: left;
+        max-height: 70px;
+      }
+      > span {
+        padding: 10px;
+        float: left;
+        span {
+          line-height: 1;
+          display: block;
+          float: left;
+          clear: both;
+          &:last-child {
+            color: $gray-lighter;
+          }
+        }
+      }
+    }
+  }
+  .nav-footer {
+    font-family: $font-family-title;
+    font-size: 30px;
+    ul {
+      li {
+        list-style: none;
+        float: left;
+        a {
+          color: $brand-yellow;
+          margin-left: 20px;
+          &:hover {
+            text-decoration: none;
+            color: $gray-lighter;
+          }
+        }
+      }
+    }
+
+  }
+}

@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic' rel='stylesheet' type='text/css'>
     <link href="src/css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
@@ -46,11 +46,9 @@
             <div class="row">
                 <div class="col-sm-8">
                     <article class="post">
-                        <header>
-                        <span class="autor">
-
-                        </span>
-                            <span class="autor-name text-orange">Liquidador 2</span>
+                        <header class="clearfix">
+                            <img class="author" src="src/img/chuck.png">
+                            <span class="author-name text-orange">Liquidador 2</span>
                             <div class="date">
                                 <span>5 Sep 2015</span> - <span>12 mins leído</span>
                             </div>
@@ -65,8 +63,8 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel auctor metus. Pellentesque nisl est, lobortis vel lectus nec, fringilla aliquet dolor. Maecenas vitae dolor varius augue aliquet scelerisque quis vitae nibh. In facilisis, tortor vel pulvinar faucibus, urna mauris auctor ex, sed cursus nisl diam nec nisi. Fusce tempus elementum quam, in vulputate metus elementum at. Nunc placerat nulla at nulla eleifend elementum eget vitae enim. Etiam vulputate massa vel nisi aliquam, a feugiat eros ullamcorper. Proin diam sem, mattis eu facilisis sit amet, mattis sed augue. Curabitur id nisl ac augue dictum sodales.
                         </p>
                         <footer>
-                            <a class="readmore text-orange" href="#leer-mas">Leer más...</a>
-                            <span class="coments">Comentarios</span>
+                            <a class="readmore text-orange pull-left" href="#leer-mas">Leer más...</a>
+                            <span class="coments pull-right">Comentarios</span>
                         </footer>
                     </article>
                 </div>
@@ -80,13 +78,21 @@
                         <li><a href="#javascript" class="label label-yellow">PHP</a></li>
                         <li><a href="#javascript" class="label label-aquamarine">Magallanes</a></li>
                         <li><a href="#javascript" class="label label-yellow">Android</a></li>
+                        <li><a href="#javascript" class="label label-aquamarine">Magallanes</a></li>
                         <li><a href="#javascript" class="label label-orange">PHPStorm</a></li>
+                        <li><a href="#javascript" class="label label-orange">Javascript</a></li>
+                        <li><a href="#javascript" class="label label-yellow">PHP</a></li>
+                        <li><a href="#javascript" class="label label-yellow">Android</a></li>
+                        <li><a href="#javascript" class="label label-aquamarine">Magallanes</a></li>
+                        <li><a href="#javascript" class="label label-orange">PHPStorm</a></li>
+                        <li><a href="#javascript" class="label label-aquamarine">Magallanes</a></li>
+
                     </ul>
                     <h3 class="top-posts">Top posts</h3>
                     <ul class="top-posts">
                         <li><a href="#link">Primeros pasos con Sketch</a></li>
                         <li><a href="#link">Android Studio trucos</a></li>
-                        <li><a href="#link">Magallanes desde cero</a></li>
+                        <li><a href="#link">Magallanes desde cero lorem ipsum et cren donar asic later e ego viltro</a></li>
                         <li><a href="#link">Patrones de diseño II</a></li>
                         <li><a href="#link">Magento Themes</a></li>
                         <li><a href="#link">Patrones de diseño II</a></li>
@@ -95,18 +101,27 @@
             </div>
 
         </section>
-        <footer class="container">
-            <div class="row">
-                <div class="col-xs-4">
-                </div>
-                <div class="col-xs-8">
-                    <nav>
-                        <ul>
-                            <li><a href="#posts">Posts</a></li>
-                            <li><a href="#nosotros">Nosotros</a></li>
-                            <li><a href="#contacto">Contacto</a></li>
-                        </ul>
-                    </nav>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a class="brand" href="/">
+                            <img class="img-responsive" src="src/img/atom-bw.svg">
+                                <span>
+                                    <span>Atomic</span>
+                                    <span>Posts</span>
+                                </span>
+                        </a>
+                    </div>
+                    <div class="col-xs-8">
+                        <nav class="nav-footer pull-right">
+                            <ul>
+                                <li><a href="#posts">Posts</a></li>
+                                <li><a href="#nosotros">Nosotros</a></li>
+                                <li><a href="#contacto">Contacto</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </footer>
