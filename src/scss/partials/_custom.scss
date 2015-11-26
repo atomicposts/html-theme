@@ -263,6 +263,9 @@ body {
 
 /* Post Styles */
 .post {
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid $gray-lighter;
   header {
     padding-bottom: 15px;
     img.author {

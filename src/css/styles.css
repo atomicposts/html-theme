@@ -6006,30 +6006,34 @@ a.text-yellow:focus {
     background-color: #ffcd55; }
 
 /* Post Styles */
-.post header {
-  padding-bottom: 15px; }
-  .post header img.author {
-    display: block;
-    float: left;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-right: 15px; }
-  .post header .date {
-    color: #777777; }
-  .post header .author-name {
-    font-size: 16px;
-    display: inline-block;
-    margin-bottom: 5px; }
-.post .title {
-  font-weight: bold; }
-.post .subtitle {
-  margin: 10px 0 20px 0; }
-.post p {
-  font-size: 21px;
-  font-weight: 300; }
-.post > footer {
-  padding: 10px 0; }
+.post {
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eeeeee; }
+  .post header {
+    padding-bottom: 15px; }
+    .post header img.author {
+      display: block;
+      float: left;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin-right: 15px; }
+    .post header .date {
+      color: #777777; }
+    .post header .author-name {
+      font-size: 16px;
+      display: inline-block;
+      margin-bottom: 5px; }
+  .post .title {
+    font-weight: bold; }
+  .post .subtitle {
+    margin: 10px 0 20px 0; }
+  .post p {
+    font-size: 21px;
+    font-weight: 300; }
+  .post > footer {
+    padding: 10px 0; }
 
 /* Footer styles */
 body > footer {
